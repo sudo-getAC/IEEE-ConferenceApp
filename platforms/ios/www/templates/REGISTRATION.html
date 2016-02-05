@@ -1,5 +1,128 @@
-<ion-view view-title="IEEE DISCOVER 2016">
-  <ion-content>
-    <h1>REGISTRATION</h1>
-  </ion-content>
+<ion-view view-title="Registration Details">
+<ion-content>
+<div class="card">
+  <div class="item item-divider">
+   <strong>Registration Fees</strong>
+  </div>
+  <div class="item item-text-wrap">
+ 1. Student Attendees must produce their "Institute ID Cards" during the Registration Procedure at NITK, Surathkal.</div>
+  <div class="item item-text-wrap">
+ 2. Atleast one author of every accepted paper must pay the Registration fees and present the paper (in person) during the Conference. </div>
+  <div class="item item-text-wrap">
+  3. Papers not presented at the Conference will not be included in the Final Program and Conference Proceedings. </div>
+</div>
+<div class="button-bar ">
+  <a class="button button-positive" ng-click="openModal()" ng-controller="MainCtrl">Indian</a>
+  <a class="button button-energized" ng-click="openModal1()" ng-controller="MainCtrl1">Foreign</a>
+</div>
+
+<div class="card">
+  <div class="item item-divider">
+   <strong> Payment Details</strong>
+  </div>
+  <div class="item item-text-wrap">
+ Payment of Registration Fee can be made by online transaction. Details are furnished below:</div>
+  <div class="item item-text-wrap">
+ <strong>Bank Name:</strong> Canara Bank </div>
+<div class="item item-text-wrap">
+ <strong>Account Name:</strong> IEEE Mangalore </div>
+<div class="item item-text-wrap">
+ <strong>Account No:</strong> 8517 1010 03602 </div>
+<div class="item item-text-wrap">
+ <strong>Indian Financial System Code (IFSC):</strong>  CNRB0008517 </div>
+<div class="item item-text-wrap">
+ <strong>Society for the Worldwide Interbank Financial Telecommunication (SWIFT) Code:</strong> CNRBINBBRFM</div>
+<div class="item item-text-wrap item-divider">
+	Please mention your Paper-ID and FULL NAME while making the online payment.
+	</div>
+</div>
+</ion-content>
 </ion-view>
+
+<script id="contact-modal.html" type="text/ng-template" ng-controller="MyCtrl as ctrl">
+  <div class="modal">
+    <ion-header-bar class="bar-royal">
+        <h1 class="title"><center>Indian</center></h1>
+    </ion-header-bar>
+    <ion-content>
+    	<br>
+    	<br>
+    	<br>
+    	<br>
+        <div class="row header">
+          <div class="col">Registration Type</div>
+          <div class="col">Indian Author</div>
+        </div>
+        <div class="row">
+          <div class="col">Regular Author</div>
+          <div class="col">INR 9000</div>
+        </div>
+        <div class="row">
+          <div class="col">IEEE Author</div>
+          <div class="col">INR 8000</div>
+        </div>
+        <div class="row">
+          <div class="col">Student Author</div>
+          <div class="col">INR 8000</div>
+        </div>
+        <div class="row">
+          <div class="col">IEEE Student Author</div>
+          <div class="col">INR 7000</div>
+        </div>
+        <div class="row">
+          <div class="col">Regular Attendee</div>
+          <div class="col">INR 3000</div>
+        </div>
+        <div class="row">
+          <div class="col">Student Attendee</div>
+          <div class="col">INR 9000</div>
+        </div>
+          <button class="button button-full button-balanced ion-chevron-left" ng-click="closeModal()">Back</button>
+
+    </ion-content>
+  </div>
+</script>
+
+<script id="contact-modal1.html" type="text/ng-template">
+  <div class="modal">
+    <ion-header-bar class="bar-royal">
+        <h1 class="title"><center>Foreign</center></h1>
+    </ion-header-bar>
+    <ion-content>
+    	<br>
+    	<br>
+    	<br>
+    	<br>
+        <div class="row header">
+          <div class="col">Registration Type</div>
+          <div class="col">Foreign Author</div>
+        </div>
+        <div class="row">
+          <div class="col">Regular Author</div>
+          <div class="col">USD 400</div>
+        </div>
+        <div class="row">
+          <div class="col">IEEE Author</div>
+          <div class="col">USD 350</div>
+        </div>
+        <div class="row">
+          <div class="col">Student Author</div>
+          <div class="col">USD 350</div>
+        </div>
+        <div class="row">
+          <div class="col">IEEE Student Author</div>
+          <div class="col">USD 300</div>
+        </div>
+        <div class="row">
+          <div class="col">Regular Attendee</div>
+          <div class="col">USD 150</div>
+        </div>
+        <div class="row">
+          <div class="col">Student Attendee</div>
+          <div class="col">USD 100</div>
+        </div>
+          <button class="button button-full button-balanced ion-chevron-left" ng-click="closeModal1()">Back</button>
+    
+    </ion-content>
+  </div>
+</script>

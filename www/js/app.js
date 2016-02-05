@@ -23,6 +23,8 @@ angular.module('starter', ['ionic','starter.controllers'])
   });
 })
 
+
+
 .config(function($stateProvider,$urlRouterProvider) {
   $stateProvider
 
@@ -45,19 +47,13 @@ angular.module('starter', ['ionic','starter.controllers'])
       url: '/CFP',
       views: {
         'menuContent' : {
-          templateUrl : 'templates/CFP.html'
+          templateUrl : 'templates/CFP.html',
+          controller : 'CFPCtrl'
         }
       }
     })
 
-    .state('app.COMMITTEE',{
-      url:'/COMMITTEE',
-      views: {
-        'menuContent' : {
-          templateUrl:'templates/COMMITTEE.html'
-        }
-      }
-    })
+    
 
     .state('app.IMPORTANT_DATES',{
       url:'/IMPORTANT_DATES',
@@ -103,20 +99,12 @@ angular.module('starter', ['ionic','starter.controllers'])
           templateUrl:'templates/CONTACT_US.html'
         }
       }
-    })
-
-    .state('app.DEVELOPERS',{
-      url:'/DEVELOPERS',
-      views: {
-        'menuContent' : {
-          templateUrl:'templates/DEVELOPERS.html',
-          controller: 'SubCtrl'
-        }
-      }
     });
 
     $urlRouterProvider.otherwise('/app/HOME');
 });
+
+
 
 
 
