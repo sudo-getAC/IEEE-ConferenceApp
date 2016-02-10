@@ -52,3 +52,57 @@ p#p02{
 .row:last-child .col {
     border-bottom: solid 1px grey;
 }
+
+.textoverpic {
+  background: url(../images/ieee_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 80%;
+  height : 100%;
+  margin : auto;
+  z-index: 2;
+  position: relative;
+}
+
+#container {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+#container::after {
+  content: '';
+  background-image: 0xffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 30px; right: 0; bottom: 0; left: 0;
+  opacity: 0.5;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(2px);
+  -ms-filter: blur(2px);
+  -o-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1.0);
+}
+
+.parent {
+  position: absolute;
+  top: 0px; right: 0; bottom: 0; left: 0;
+  height: 100%;
+  width : 100%;
+  font-size: 14px;
+  display: flex;
+  background-size: cover;
+}
+
+.centered {
+  margin: auto;
+  color: white;
+}
+

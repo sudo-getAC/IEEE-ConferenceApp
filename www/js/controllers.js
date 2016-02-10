@@ -1,32 +1,8 @@
 angular.module('starter.controllers', [])
 
 
-.controller('IMPDCtrl',function($scope){
-	
-	$scope.events=[
-	{
-		title:"Paper Submission Deadline",
-		date:"Sunday, March 20,2016"
-	},
-	{
-		title:"Acceptance Notification",
-		date:"Sunday,May 01,2016"
-	},
-	{
-		title:"CRC Submission Deadline",
-		date:"Tuesday,May 10,2016"
-	},
-	{
-		title:"Last Date of Registration",
-		date:"Tuesday,May 10,2016"
-	},
-	{
-		title:"Conference Dates",
-		date:"August 13-14,2016 (Saturday and Sunday)"
-	}
-
-	];
-
+.controller('ImpDates',function($scope,fireBaseData,$firebase){
+	$scope.dates=$firebase(fireBaseData.refRoomMates()).$asArray();
 })
 
 .controller('MainCtrl', function($scope, $ionicModal) {
@@ -54,6 +30,8 @@ angular.module('starter.controllers', [])
     $scope.modal.remove();
   });
 })
+
+
 .controller('MainCtrl1', function($scope, $ionicModal) {
   $scope.contact = {
     name: 'Foreign',
@@ -164,18 +142,16 @@ angular.module('starter.controllers', [])
 			"Robots for Commercial Usage",
 			"Humanoids"
 		]
-	},
-	{
-		name:"Best Paper Awards",
-		items:[
-			"Technical Programme Committee of DISCOVER will select One Best Paper in each of the tracks mentined above"
-			,
-			"It is mandatory to present paper during the Conference so as to be considered for Best Paper Award",
-			"Best Paper Awards will be announced and distributed during the Conference"	
-		]
 	}
 
 	];
+
+	$scope.groups1=[{
+		name:"Best Paper Awards",
+		items:["Technical Programme Committee of DISCOVER will select One Best Paper in each of the tracks mentined above",
+		"It is mandatory to present paper during the Conference so as to be considered for Best Paper Award",
+		"Best Paper Awards will be announced and distributed during the Conference"]
+	}];
   
   
   /*

@@ -1,31 +1,17 @@
 angular.module('starter.controllers', [])
 
 
-.controller('IMPDCtrl',function($scope){
-	
-	$scope.events=[
-	{
-		title:"Paper Submission Deadline",
-		date:"Sunday, March 20,2016"
-	},
-	{
-		title:"Acceptance Notification",
-		date:"Sunday,May 01,2016"
-	},
-	{
-		title:"CRC Submission Deadline",
-		date:"Tuesday,May 10,2016"
-	},
-	{
-		title:"Last Date of Registration",
-		date:"Tuesday,May 10,2016"
-	},
-	{
-		title:"Conference Dates",
-		date:"August 13-14,2016 (Saturday and Sunday)"
-	}
+.controller('ImpDates',function($scope){
 
-	];
+	$scope.dates=[
+	{
+		name:"Mohit",
+		value:"reddy"
+	},
+	{
+		name : "Chinnu",
+		value : "reddy"
+	}];
 
 })
 
